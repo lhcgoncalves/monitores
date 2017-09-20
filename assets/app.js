@@ -34,7 +34,7 @@ function createSquare(obj) {
     html = "<div class='square'>";
     html += "<span class='title'>" + obj.friendlyname + "</span>";
     html += status;
-    html += "<p>" + obj.url + "</p></div>";
+    html += "<p>" + obj.url + "<br><small>Estabilidade: <b>"+obj.alltimeuptimeratio+"%</b> - Atualiza a cada <b>"+(obj.interval / 60)+"</b> min.</small></p></div>";
 
     $("#monitores").append(html);
 }
