@@ -28,10 +28,27 @@
 <body>
     <nav class="nav-top">Monitores<br><small>Uptime Robot</small></nav>
     <div class="container-fluid">
-        <div id="monitores"></div>
+        <div id="monitores"><h2 class="loading">Conectando ao Uptime Robot...</h2></div>
+    </div>
+
+
+    <div class="modal fade" id="mdl" tabindex="-1" role="dialog" aria-labelledby="mdlLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="mdlLabel">Atividade</h4>
+                </div>
+                <div class="modal-body" id="mdlBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/app.js"></script>
 </body>
 </html>

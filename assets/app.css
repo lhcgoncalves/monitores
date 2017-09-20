@@ -18,6 +18,14 @@ body {
 	font-size: 18pt;
 }
 
+.log {
+    min-width: 100%;
+    min-height: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 5px;
+}
 
 .large-icon {
 	font-size: 42pt;
@@ -29,4 +37,32 @@ body {
 	background: #0269C2;
 	text-align: center;
 	color: #fff;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+.loading {
+   -webkit-animation: flickerAnimation 1.5s infinite;
+   -moz-animation: flickerAnimation 1.5s infinite;
+   -o-animation: flickerAnimation 1.5s infinite;
+    animation: flickerAnimation 1.5s infinite;
 }
