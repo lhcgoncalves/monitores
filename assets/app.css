@@ -1,11 +1,31 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css');
 
+body {
+	background: #ddd;
+}
 
 .square {
     min-width: 100%;
     min-height: 60px;
     background-color: #f7f7f7;
-    border: 1px solid #eee;
-    padding: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
     margin-bottom: 5px;
+}
+
+.square .title {
+	font-size: 18pt;
+}
+
+
+.large-icon {
+	font-size: 42pt;
+}
+
+.nav-top {
+    padding: 10px;
+    margin-bottom: 10px;
+	background: #0269C2;
+	text-align: center;
+	color: #fff;
 }

@@ -22,15 +22,19 @@ function createSquare(obj) {
     let status;
 
     if (obj.status == 2) {
-        status =  'UP';
-    } else {
-        status =  'DOWN';
+        status =  '<span class="glyphicon glyphicon-ok pull-right text-success large-icon"></span>';
+    } 
+    else if (obj.status == 0 || obj.status == 1) {
+        status =  '<span class="glyphicon glyphicon-refresh pull-right text-warning large-icon"></span>';
+    } 
+    else {
+        status =  '<span class="glyphicon glyphicon-remove pull-right text-danger large-icon"></span>';
     }
 
     html = "<div class='square'>";
-    html += "<h3>" + obj.friendlyname + "</h3>";
-    html += "<p>Status: " + status + "</p>";
-
+    html += "<span class='title'>" + obj.friendlyname + "</span>";
+    html += status;
+    html += "<p>" + obj.url + "</p></div>";
 
     $("#monitores").append(html);
 }
@@ -38,7 +42,7 @@ function createSquare(obj) {
 // Register SW.js
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-    .register('./service-worker.js')
+    .register('service-worker.js')
     .then(function(reg) {
         console.log('Service worker Registered');
     })
@@ -47,5 +51,3 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-
-// m779432842-bf9ce956174beb7419fc2794
